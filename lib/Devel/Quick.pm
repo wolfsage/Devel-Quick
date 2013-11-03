@@ -188,7 +188,7 @@ B<$args> is simply a reference to C<@_> that the code that is about to be
 executed can see. This is only relevant within subroutines. B<$hasargs> may tell 
 you if this is filled in or not, or just check @$args.
 
-Changing the underlying values will affect when the current subroutine sees.
+Changing the underlying values will affect what the current subroutine sees.
 
 =head1 AUTHOR
 

@@ -1,8 +1,18 @@
 Revision history for Perl module Devel::Quick
 
+0.04 2013-11-03
+
+    * Fix changes file format (neilbowers)
+
+    * Fix docs (I'm noticing a theme here)
+
 0.03 2013-11-02
 
-0.01 2013-11-02
+    * Fix docs
+
+0.02 2013-11-02
+
+    * Fix docs
 
 0.01 2013-11-02
 
