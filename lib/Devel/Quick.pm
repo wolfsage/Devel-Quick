@@ -87,15 +87,15 @@ Devel::Quick - Write single-step debugger one-liners easily (DB::DB)
 
 Devel::Trace in one line:
 
-  perl -d:Quick='print ">> ($subroutine)$filename:$line $code"' prog.pl
+  perl -d:Quick='print ">> $filename:$line $code"' prog.pl
 
 The above, with L<strict> checking enabled (not default):
 
-  perl -d:Quick=-strict,'print ">> ($subroutine)$filename:$line $code"' prog.pl
+  perl -d:Quick=-strict,'print ">> $filename:$line $code"' prog.pl
 
 Or shortened:
 
-  perl -d:Quick=-s,'print ">> ($subroutine)$filename:$line $code"' prog.pl
+  perl -d:Quick=-s,'print ">> $filename:$line $code"' prog.pl
 
 If you need '-' as the first character in your code, use a ';':
 
