@@ -11,7 +11,7 @@ Devel::Trace in one line:
 
   perl -d:Quick='print ">> ($subroutine)$filename:$line $code"' prog.pl
 
-The above, with L<strict> checking enabled (not default):
+The above, with strict checking enabled (not default):
 
   perl -d:Quick=-strict,'print ">> ($subroutine)$filename:$line $code"' prog.pl
 
@@ -23,7 +23,7 @@ Or shortened:
 DESCRIPTION
 ===========
 
-This module allows you to write simple on-the-fly C<DB::DB> line debuggers 
+This module allows you to write simple on-the-fly DB::DB line debuggers 
 easily. It injects the following code around the code passed to its import 
 method and eval's it in.
 
