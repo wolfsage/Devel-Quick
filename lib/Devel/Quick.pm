@@ -97,6 +97,10 @@ Or shortened:
 
   perl -d:Quick=-s,'print ">> ($subroutine)$filename:$line $code"' prog.pl
 
+If you need '-' as the first character in your code, use a ';':
+
+  perl -d:Quick='; -1 * 2;' prog.pl
+
 =head1 DESCRIPTION
 
 This module allows you to write simple on-the-fly C<DB::DB> line debuggers 
@@ -126,6 +130,14 @@ method and eval's it in:
   
   	<<CODE>>
   }
+
+By default, warnings are enabled but strict mode is disabled. If you want 
+strict, the first argument to import should be C<-s> or C<-strict>.
+
+If you need to pass a C<-> as the first character in the Perl code, you'll need 
+to inject a semi-colon (;) before it like so:
+
+  perl -d:Quick='; -1 * 2;' prog.pl
 
 =head2 Available Arguments
 
