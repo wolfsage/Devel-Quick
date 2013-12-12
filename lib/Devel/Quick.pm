@@ -13,6 +13,7 @@ sub import {
 	if ($_[0] =~ /^-/) {
 		if ($_[0] eq '-s' || $_[0] eq '-strict') {
 			$strict = 1;
+			shift @_;
 		} else {
 			require Carp;
 			Carp::croak("Unknown switch '$_[0]'");

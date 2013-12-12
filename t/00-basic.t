@@ -54,4 +54,16 @@ lives_ok
 	'Switch processing bypassed by \';\' as first character'
 ;
 
+# -s and -strict are removed...
+lives_ok
+	{ Devel::Quick->import('-s', 'if (1 == 1) { }') }
+	'-s is not injected into final code'
+;
+
+# -s and -strict are removed...
+lives_ok
+	{ Devel::Quick->import('-strict', 'if (1 == 1) { }') }
+	'-strict is not injected into final code'
+;
+
 done_testing;
