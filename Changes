@@ -1,5 +1,9 @@
 Revision history for Perl module Devel::Quick
 
+0.05 2013-12-12
+
+    * Remove -s and -strict from generated code
+
 0.04 2013-11-03
 
     * Fix changes file format (neilbowers)
