@@ -36,10 +36,14 @@ use strict;
 use warnings;
 
 sub DB {
-	my ($package, $filename, $line,
+	# Get who called us
+	my ($package, $filename, $line) = caller(0);
+
+	# Get the rest from the context of who called us
+	my (undef, undef, undef,
 	    $subroutine, $hasargs, $wantarray,
 	    $evaltext, $is_require, $hints,
-	    $bitmask, $hinthash) = caller(0);
+	    $bitmask, $hinthash) = caller(1);
 
 	my $args = \@_;
 
@@ -114,10 +118,14 @@ method and eval's it in:
   use warnings;
 
   sub DB {
-  	my ($package, $filename, $line,
+  	# Get who called us
+  	my ($package, $filename, $line) = caller(0);
+  
+  	# Get the rest from the context of who called us
+  	my (undef, undef, undef,
   	    $subroutine, $hasargs, $wantarray,
   	    $evaltext, $is_require, $hints,
-  	    $bitmask, $hinthash) = caller(0);
+  	    $bitmask, $hinthash) = caller(1);
   
   	my $args = \@_;
   

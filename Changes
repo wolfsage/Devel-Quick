@@ -1,5 +1,10 @@
 Revision history for Perl module Devel::Quick
 
+0.06 2014-01-10
+
+    * Make $subroutine and subsequent data from caller() provide correct 
+      information
+
 0.05 2013-12-12
 
     * Remove -s and -strict from generated code

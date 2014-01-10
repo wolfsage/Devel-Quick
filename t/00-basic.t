@@ -11,7 +11,7 @@ require Devel::Quick;
 # errors get reported properly
 throws_ok
 	{ Devel::Quick->import('$x - '); }
-	qr/Failed to parse code:.*22:\s+\$x -/ms,
+	qr/Failed to parse code:.*26:\s+\$x -/ms,
 	"Bad code detected and reported"
 ;
 
