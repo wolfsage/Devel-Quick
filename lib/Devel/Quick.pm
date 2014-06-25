@@ -10,8 +10,10 @@ sub import {
 	my $strict = 0;
 	my $begin = 0;
 
+	my @opts = @_;
+
 	# Parse leading options
-	for my $opt (@_) {
+	for my $opt (@opts) {
 		if ($opt =~ /^-/) {
 			if ($opt eq '-s' || $opt eq '-strict') {
 				$strict = 1;

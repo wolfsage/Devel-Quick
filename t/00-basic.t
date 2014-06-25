@@ -77,4 +77,11 @@ lives_ok
 	'-begin is allowed'
 ;
 
+# All options are processed
+throws_ok
+	{ Devel::Quick->import('-b','-s','-r', '$x = 1') }
+	qr/Unknown switch '-r'/,
+	"Multiple switches are processed"
+;
+
 done_testing;
