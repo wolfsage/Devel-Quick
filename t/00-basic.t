@@ -66,4 +66,15 @@ lives_ok
 	'-strict is not injected into final code'
 ;
 
+# -b and -begin work
+lives_ok
+	{ Devel::Quick->import('-b', 'if (1 == 1) { }') }
+	'-b is allowed'
+;
+
+lives_ok
+	{ Devel::Quick->import('-begin', 'if (1 == 1) { }') }
+	'-begin is allowed'
+;
+
 done_testing;
