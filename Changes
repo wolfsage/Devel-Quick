@@ -1,5 +1,9 @@
 Revision history for Perl module Devel::Quick
 
+0.07 2014-06-25
+
+    * Add -b (-begin) to start stepping at compile time
+
 0.06 2014-01-10
 
     * Make $subroutine and subsequent data from caller() provide correct 
